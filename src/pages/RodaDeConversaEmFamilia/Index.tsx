@@ -10,7 +10,7 @@ import GuaranteeSection from "./Components/GuaranteeSection";
 import AboutFlavinhaSection from "./Components/AboutFlavinhaSection";
 import PromoBannerTop from "../../components/PromoBannerTop";
 
-const MyProducts = () => {
+const RodaDeConversaEmFamilia = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <PromoBannerTop />
@@ -30,4 +30,4 @@ const MyProducts = () => {
   );
 };
 
-export default MyProducts; 
+export default RodaDeConversaEmFamilia; 

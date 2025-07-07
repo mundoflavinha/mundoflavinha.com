@@ -1,6 +1,6 @@
 import { Button } from "../../../components/ui/button";
 
-const MyProductsHeroSection = () => {
+const HeroSection = () => {
   return (
     <section className="pt-16 md:pt-0 bg-gradient-to-b from-secondary to-white">
       
@@ -149,4 +149,4 @@ const MyProductsHeroSection = () => {
   );
 };
 
-export default MyProductsHeroSection; 
+export default HeroSection; 

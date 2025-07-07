@@ -68,7 +68,7 @@ const HeroSection = () => {
               </CardContent>
             </Card>
 
-            <Card key="1" className="flex items-center pl-5">
+            <Card key="2" className="flex items-center pl-5">
               <div className="h-40 md:h-48 content-center">
                 <a href="#" className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                   <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -89,7 +89,7 @@ const HeroSection = () => {
               </CardContent>
             </Card>
 
-            <Card key="1" className="flex items-center pl-5">
+            <Card key="3" className="flex items-center pl-5">
               <div className="h-40 md:h-48 content-center">
                 <a href="#" className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                   <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -110,7 +110,7 @@ const HeroSection = () => {
               </CardContent>
             </Card>
 
-            <Card key="1" className="flex items-center pl-5">
+            <Card key="4" className="flex items-center pl-5">
               <div className="h-40 md:h-48 content-center">
                 <a href="#" className="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                   <svg className="w-4 h-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
