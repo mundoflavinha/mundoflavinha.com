@@ -12,7 +12,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <a href="#" className="text-2xl font-bold text-primary">
               <img 
-                  src="/src/assets/logo_mundo-flavinha.png" 
+                  src="/images/logo_mundo-flavinha.png" 
                   alt="Product showcase" 
                   className=""
                   width="120"

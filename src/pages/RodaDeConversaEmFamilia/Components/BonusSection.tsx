@@ -2,14 +2,14 @@ import { Gift, MessageCircle } from "lucide-react";
 
 const bonuses = [
   {
-    image: "/src/assets/products/bonus-mae-conversando-filhos.jpg",
+    image: "/images/products/bonus-mae-conversando-filhos.jpg",
     icon: <Gift className="h-10 w-10 text-primary mb-2" />, // Ícone de presente
     title: "BÔNUS 1",
     subtitle: "Roda de Conversa em Família",
     description: "Um convite para sentar, ouvir, falar e se conectar de verdade. 48 cartões de perguntas prontas para facilitar o diálogo, fortalecer vínculos e criar um ambiente de escuta entre todos."
   },
   {
-    image: "/src/assets/products/bonus-rede-apoio-2.jpg",
+    image: "/images/products/bonus-rede-apoio-2.jpg",
     icon: <MessageCircle className="h-10 w-10 text-primary mb-2" />, // Ícone de mensagem
     title: "BÔNUS 2",
     subtitle: "Acesso à Comunidade",

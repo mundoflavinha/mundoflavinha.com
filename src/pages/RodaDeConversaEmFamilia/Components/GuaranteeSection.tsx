@@ -4,7 +4,7 @@ const MyProductsGuaranteeSection = () => {
       <div className="container mx-auto px-4">
         <div className="rounded-2xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto text-center flex flex-col items-center">
           <div className="mb-6">
-            <img src="/src/assets/products/selo-satisfacao-garantida.png" alt="Garantia" className="w-80 h-67" />
+            <img src="/images/products/selo-satisfacao-garantida.png" alt="Garantia" className="w-80 h-67" />
           </div>
           <h2 className="text-primary text-2xl md:text-3xl font-bold mb-4">Garantia & Segurança</h2>
           <p className="text-lg text-gray-700 mb-4 max-w-2xl">

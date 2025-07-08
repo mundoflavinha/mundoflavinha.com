@@ -7,7 +7,7 @@ const highlightedProducts = [
     id: 1,
     name: "Brinquedo Educativo Mesa Play Time",
     description: "Monitoramento avançado de atividades com alta precisão.",
-    image: "/src/assets/products/cotiplas_brinquedo-educativo_mesa-play-time.jpg",
+    image: "/images/products/cotiplas_brinquedo-educativo_mesa-play-time.jpg",
     features: [
       "High-Resolution Audio compatible",
       "Smart listening experience by Adaptive Sound Control",
@@ -19,7 +19,7 @@ const highlightedProducts = [
     id: 2,
     name: "Brinquedo Interativo Musical ",
     description: "Experiência sonora imersiva com cancelamento de ruído.",
-    image: "/src/assets/products/fisher-price_zebra_blocos-surpresa.jpg",
+    image: "/images/products/fisher-price_zebra_blocos-surpresa.jpg",
     features: [
       "High-Resolution Audio compatible",
       "Smart listening experience by Adaptive Sound Control",
@@ -31,7 +31,7 @@ const highlightedProducts = [
     id: 3,
     name: "Zebra Blocos Surpresa",
     description: "Elegância e tecnologia com monitoramento completo de saúde.",
-    image: "/src/assets/products/dm-toys_brinquedo-interativo-musical.jpg",
+    image: "/images/products/dm-toys_brinquedo-interativo-musical.jpg",
     features: [
       "High-Resolution Audio compatible",
       "Smart listening experience by Adaptive Sound Control", 

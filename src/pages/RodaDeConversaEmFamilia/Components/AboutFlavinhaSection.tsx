@@ -18,7 +18,7 @@ const MyProductsAboutFlavinhaSection = () => {
           </div>
           <div className="order-1 md:order-2 flex justify-left">
             <img 
-              src="/src/assets/eu-flavinha.png"
+              src="../images/eu-flavinha.png"
               alt="Flávia Guimarães - Mundo Flavinha"
               className="rounded-lg shadow-lg w-72 h-72 object-cover"
             />

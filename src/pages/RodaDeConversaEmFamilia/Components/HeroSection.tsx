@@ -80,7 +80,7 @@ const HeroSection = () => {
         
             <div className="relative h-64 md:h-full flex items-center justify-center">
               <img 
-                src="/src/assets/products/filho-celular.png" 
+                src="/images/products/filho-celular.png" 
                 alt="Olhou Achou - Jogo Educativo" 
                 className="rounded-lg  w-128 h-128 object-contain mb-4 w-max-lg z-10"
                 />

@@ -16,7 +16,7 @@ const MyProductsNavbar = () => {
           <div className="flex justify-center">
             <a href="#" className="text-2xl font-bold text-primary flex justify-center w-full">
               <img 
-                src="/src/assets/logo_mundo-flavinha.png" 
+                src="/images/logo_mundo-flavinha.png" 
                 alt="Logo Mundo Flavinha - Product showcase" 
                 className="mx-auto"
                 width="120"
@@ -24,7 +24,7 @@ const MyProductsNavbar = () => {
             </a>
           </div>
           {/* Direita: Botão ou menu */}
-          <div className="flex justify-end items-center">
+          {/* <div className="flex justify-end items-center">
             <div className="hidden md:block">
               <Button className="group px-8 py-3 bg-transparent rounded-full font-medium text-primary hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-x">
                 Ir para o site principal
@@ -38,10 +38,10 @@ const MyProductsNavbar = () => {
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+        {/* {isMenuOpen && (
           <div className="md:hidden mt-4 pb-4 animate-fade-in">
             <div className="flex flex-col space-y-4">
               <a href="#home" className="text-gray-700 hover:text-primary transition-colors">Home</a>
@@ -54,7 +54,7 @@ const MyProductsNavbar = () => {
               </Button>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </nav>
   );

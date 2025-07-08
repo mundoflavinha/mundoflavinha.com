@@ -15,7 +15,7 @@ const MyProductsForWhoSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
         <div className="order-1 md:order-1 flex justify-end">
             <img 
-              src="/src/assets/products/mae-filho-brincando.jpg"
+              src="/images/products/mae-filho-brincando.jpg"
               alt="Família brincando com o jogo Olhou Achou"
               className="rounded-lg shadow-lg w-80 h-50 object-contain"
             />

@@ -37,7 +37,7 @@ const MothersPainsSection = () => {
           
           <div className="order-1 md:order-2 flex justify-center">
             <img 
-              src="/src/assets/mother-pain.png"
+              src="/images/mother-pain.png"
               alt="Mãe sentida com filho no celular"
               className="max-h-96 object-contain"
             />

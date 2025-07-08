@@ -29,7 +29,7 @@ const HeroSection = () => {
               <div className="absolute -top-6 -left-6 w-24 h-24 bg-tertiary rounded-full opacity-70"></div>
               <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent rounded-full opacity-50"></div>
               <img 
-                src="/src/assets/eu-flavinha.png" 
+                src="/images/eu-flavinha.png" 
                 alt="Product showcase" 
                 className="rounded-lg shadow-xl relative z-10 w-meddium max-w-lg mx-auto"
               />
