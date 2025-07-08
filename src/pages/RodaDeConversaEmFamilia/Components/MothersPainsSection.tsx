@@ -10,7 +10,7 @@ const MyProductsMothersPainsSection = () => {
   return (
     <section className="py-16 md:py-24 bg-secondary bg-opacity-30">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-32 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 lg:gap-24 items-center">
           <div className="order-2 md:order-1 text-right">
             <h2 className="text-primary text-3xl md:text-5xl font-bold mb-6">As dores que toda mãe moderna sente...</h2>
             <div className="space-y-6 mb-8">

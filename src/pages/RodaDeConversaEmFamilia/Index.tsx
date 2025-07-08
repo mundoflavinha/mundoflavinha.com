@@ -8,7 +8,7 @@ import BonusSection from "./Components/BonusSection";
 import OfferSection from "./Components/MyProductsOfferSection";
 import GuaranteeSection from "./Components/GuaranteeSection";
 import AboutFlavinhaSection from "./Components/AboutFlavinhaSection";
-import PromoBannerTop from "../../components/PromoBannerTop";
+import PromoBannerTop from "./Components/PromoBannerTop";
 
 const RodaDeConversaEmFamilia = () => {
   return (

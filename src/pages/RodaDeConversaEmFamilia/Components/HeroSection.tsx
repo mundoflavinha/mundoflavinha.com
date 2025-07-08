@@ -2,7 +2,7 @@ import { Button } from "../../../components/ui/button";
 
 const HeroSection = () => {
   return (
-    <section className="pt-16 md:pt-0 bg-gradient-to-b from-secondary to-white">
+    <section className="md:pt-0 bg-gradient-to-b from-secondary to-white">
       
       <div className="relative overflow-hidden bg-gradient-to-br from-purple-00 via-cyan-500 to-blue-400">
         
@@ -39,7 +39,7 @@ const HeroSection = () => {
               <div className="inline-block mb-4">
                 <div className="flex items-center gap-2 bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-4 py-2 text-white font-medium">
                   <svg className="w-4 h-4 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
                   </svg>
                   <span>Quero te ajudar a se conectar com seu filho!</span>
                 </div>
@@ -62,7 +62,7 @@ const HeroSection = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
                 
-                <Button className="group px-8 py-6 md:text-1x2 bg-white rounded-full font-medium text-primary hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                {/* <Button className="group px-8 py-6 md:text-1x2 bg-white rounded-full font-medium text-primary hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                   Clique aqui e veja como
                 </Button>
                 
@@ -73,7 +73,7 @@ const HeroSection = () => {
                       <circle cx="12" cy="12" r="10"></circle>
                     </svg>
                   </span>  
-                </Button>
+                </Button> */}
               </div>
             </div>
             

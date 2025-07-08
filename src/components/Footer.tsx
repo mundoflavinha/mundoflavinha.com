@@ -41,7 +41,7 @@ const Footer = () => {
           <div>
             <h4 className="text-primary text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-            <li><a href="#home" className="text-quaternary hover:text-primary transition-colors">Garantir meu jogo agora</a></li>
+            <li><a href="#limited-offer" className="text-quaternary hover:text-primary transition-colors">Garantir meu jogo agora</a></li>
               {/* <li><a href="#home" className="text-quaternary hover:text-primary transition-colors">Home</a></li>
               <li><a href="#features" className="text-quaternary hover:text-primary transition-colors">Features</a></li>
               <li><a href="#products" className="text-quaternary hover:text-primary transition-colors">Products</a></li>

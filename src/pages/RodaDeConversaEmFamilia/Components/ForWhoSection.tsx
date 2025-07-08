@@ -12,8 +12,8 @@ const MyProductsForWhoSection = () => {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
-        <div className="order-1 md:order-1 flex justify-end">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-12 lg:gap-12 items-center">
+        <div className="order-1 md:order-1 flex justify-end md:justify-center sm:justify-center">
             <img 
               src="/images/products/mae-filho-brincando.jpg"
               alt="Família brincando com o jogo Olhou Achou"
