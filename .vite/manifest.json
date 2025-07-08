@@ -1,6 +1,6 @@
 {
-  "_client-BLOxrdb5.js": {
-    "file": "assets/client-BLOxrdb5.js",
+  "_client-KwWNvrXn.js": {
+    "file": "assets/client-KwWNvrXn.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,15 +8,15 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-Cgy1_ON3.js",
+    "file": "assets/app-DjliQ0yQ.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-BLOxrdb5.js"
+      "_client-KwWNvrXn.js"
     ],
     "css": [
-      "assets/app-CZnuLQtK.css"
+      "assets/app-BAhJ7VVK.css"
     ]
   }
 }
