@@ -1,0 +1,22 @@
+{
+  "_client-BLOxrdb5.js": {
+    "file": "assets/client-BLOxrdb5.js",
+    "name": "client",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "file": "assets/app-Cgy1_ON3.js",
+    "name": "app",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "_client-BLOxrdb5.js"
+    ],
+    "css": [
+      "assets/app-CZnuLQtK.css"
+    ]
+  }
+}
