@@ -3,7 +3,10 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main        # ou 'master', conforme seu branch principal
+      - main
+
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -24,6 +27,13 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Add CNAME for custom domain
+        run: echo www.mundoflavinha.com > dist/CNAME
+
+      # (Opcional) Fallback SPA: copie index.html para 404.html se usar SPA puro
+      # - name: SPA fallback 404.html
+      #   run: cp dist/index.html dist/404.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
