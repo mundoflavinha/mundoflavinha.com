@@ -1,6 +1,6 @@
 import React from "react";
 import Home from "./pages/Index";
-import Rede from "./pages/RodaDeConversaEmFamilia/Index";
+import Roda from "./pages/RodaDeConversaEmFamilia/Index";
 
 export const routes = [
   {
@@ -9,7 +9,7 @@ export const routes = [
     index: true,
   },
   {
-    path: "/rode-de-conversa-em-familia",
-    element: <Rede />,
+    path: "/roda-de-conversa-em-familia",
+    element: <Roda />,
   },
 ];
