@@ -2,7 +2,7 @@
   "\u0000/home/runner/work/mundoflavinha.com/mundoflavinha.com/node_modules/prop-types/index.js?commonjs-module": [],
   "\u0000/home/runner/work/mundoflavinha.com/mundoflavinha.com/node_modules/react-dom/cjs/react-dom.production.min.js?commonjs-exports": [],
   "\u0000/home/runner/work/mundoflavinha.com/mundoflavinha.com/node_modules/react-dom/client.js?commonjs-exports": [
-    "/assets/client-S6qxhXV6.js"
+    "/assets/client-g9KexXom.js"
   ],
   "\u0000/home/runner/work/mundoflavinha.com/mundoflavinha.com/node_modules/react-dom/index.js?commonjs-module": [],
   "\u0000/home/runner/work/mundoflavinha.com/mundoflavinha.com/node_modules/react/cjs/react-jsx-runtime.production.min.js?commonjs-exports": [],
@@ -38,7 +38,7 @@
   "node_modules/prop-types/lib/ReactPropTypesSecret.js": [],
   "node_modules/react-dom/cjs/react-dom.production.min.js": [],
   "node_modules/react-dom/client.js": [
-    "/assets/client-S6qxhXV6.js"
+    "/assets/client-g9KexXom.js"
   ],
   "node_modules/react-dom/index.js": [],
   "node_modules/react-fast-compare/index.js": [],
@@ -64,6 +64,15 @@
   "src/index.css": [],
   "src/lib/utils.ts": [],
   "src/main.tsx": [],
+  "src/pages/DiaDosPais/Components/AboutFlavinhaSection.tsx": [],
+  "src/pages/DiaDosPais/Components/FeaturesSection.tsx": [],
+  "src/pages/DiaDosPais/Components/GuaranteeSection.tsx": [],
+  "src/pages/DiaDosPais/Components/HeroSection.tsx": [],
+  "src/pages/DiaDosPais/Components/Navbar.tsx": [],
+  "src/pages/DiaDosPais/Components/OQueVaiReceber.tsx": [],
+  "src/pages/DiaDosPais/Components/OfferSection.tsx": [],
+  "src/pages/DiaDosPais/Components/PromoBannerTop.tsx": [],
+  "src/pages/DiaDosPais/Index.tsx": [],
   "src/pages/JogoOlhouAchou/Components/AboutFlavinhaSection.tsx": [],
   "src/pages/JogoOlhouAchou/Components/BonusSection.tsx": [],
   "src/pages/JogoOlhouAchou/Components/FeaturesSection.tsx": [],
