@@ -62,11 +62,11 @@ const HeroSection = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
                 
-                {/* <Button className="group px-8 py-6 md:text-1x2 bg-white rounded-full font-medium text-primary hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                  Clique aqui e veja como
+                <Button className="group px-8 py-6 md:text-1x2 bg-white rounded-full font-medium text-primary hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+                  Comprar agora!
                 </Button>
                 
-                <Button className="group px-8 py-6 bg-transparent border-2 border-white border-opacity-50 rounded-full font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">
+                {/* <Button className="group px-8 py-6 bg-transparent border-2 border-white border-opacity-50 rounded-full font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">
                   <span className="flex items-center justify-center gap-2">
                     Fale comigo
                     <svg className="w-4 h-4 text-white group-hover:animate-ping" fill="currentColor" viewBox="0 0 24 24">
@@ -122,29 +122,6 @@ const HeroSection = () => {
         
       </div>
       
-      {/* <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-12 md:mb-0">
-            <h1 className="text-3xl md:text-5xl font-bold mb-6 text-left md:text-left">
-              Seu filho está passando tempo demais nas telas?
-            </h1>
-            <p className="text-lg text-gray-700 mb-8 max-w-lg text-left md:text-left">
-              Você sente que falta conexão e momentos juntos?<br />
-              Com "Olhou, Achou!", você brinca, ensina e cria memórias afetivas com um jogo educativo e 100% inovador.
-            </p>
-            <Button className="bg-primary hover:bg-opacity-90 text-white px-8 py-6 text-lg">
-              Quero garantir o meu jogo agora!
-            </Button>
-          </div>
-          <div className="md:w-1/2 flex justify-center">
-            <img 
-                src="/src/assets/products/filho-celular.png" 
-                alt="Olhou Achou - Jogo Educativo" 
-                className="rounded-lg  w-128 h-128 object-contain mb-4 w-max-lg"
-                />
-          </div>
-        </div>
-      </div> */}
     </section>
   );
 };
