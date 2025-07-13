@@ -16,7 +16,7 @@ const OfferSection = () => {
               <span className="text-base text-gray-500">Oferta de Lançamento</span>
             </div>
 
-            <Button className="group px-8 py-6 bg-primary text-lg hover:bg-opacity-90 text-white rounded-full font-medium text-white hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+            <Button onClick={() => window.open('https://pay.cakto.com.br/zk8k9os_475370', '_blank')}  className="group px-8 py-6 bg-primary text-lg hover:bg-opacity-90 text-white rounded-full font-medium text-white hover:bg-secondary transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
               Quero garantir o meu jogo agora!
             </Button>
           </div>

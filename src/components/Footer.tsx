@@ -67,11 +67,11 @@ const Footer = () => {
               {/* <li className="flex items-start">
                 <MapPin size={20} className="text-primary mr-3 mt-1" />
                 <span className="text-white">123 Business Avenue, New York, NY 10001</span>
-              </li> */}
+              </li>
               <li className="flex items-center">
                 <Phone size={20} className="text-primary mr-3" />
                 <span className="text-quaternary">+55 (21) 99999-9999</span>
-              </li>
+              </li> */}
               <li className="flex items-center">
                 <Mail size={20} className="text-primary mr-3" />
                 <span className="text-quaternary">contato@mundoflavinha.com</span>

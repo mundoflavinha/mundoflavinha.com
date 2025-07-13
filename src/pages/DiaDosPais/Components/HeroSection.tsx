@@ -65,7 +65,7 @@ const HeroSection = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
                 
-                <Button onClick={() => window.location.href = '#limited-offer'} className="group px-8 py-6 md:text-1x2 bg-white rounded-full font-medium text-primary hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+              <Button onClick={() => window.location.href = '#limited-offer'} className="group px-8 py-6 md:text-1x2  bg-white rounded-full font-medium text-primary hover:bg-primary hover:text-white transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
                   {/* <a href="#limited-offer"> */}
                     Quero esse kit agora
                   {/* </a> */}
@@ -76,9 +76,9 @@ const HeroSection = () => {
         
             <div className="relative h-64 md:h-full flex items-center justify-center">
               <img 
-                src="/images/products/filho-celular.png" 
-                alt="Olhou Achou - Jogo Educativo" 
-                className="rounded-lg  w-128 h-128 object-contain mb-4 w-max-lg z-10"
+                src="/images/products/dia-dos-pais/dia-dos-pais-filha-dando-cartao.png" 
+                alt="Dia dos pais - Filho dando cartão para o pai" 
+                className="h-60 w-60 object-cover md:h-auto md:w-80 z-10 rounded-full object-cover shadow-[0px_0px_45px_10px_rgba(0,253,255,1)]"
                 />
               <div className="absolute w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-white-500 to-purple-600 rounded-full animate-pulse-slow"></div>
               

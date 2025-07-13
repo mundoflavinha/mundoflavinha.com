@@ -24,6 +24,8 @@ const MyProductsFeaturesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-primary text-3xl md:text-4xl font-bold mb-4">Você vai obter o material de forma fácil e prática!</h2>
+          <p>Assim que concluir sua compra será enviado em seu e-mail os dados de acesso à plataforma para realizar o download.</p>
+          <p>Certifique-se de verificar sua caixa de entrada e, se necessário, sua pasta de spam.</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (

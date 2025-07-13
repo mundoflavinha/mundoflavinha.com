@@ -7,7 +7,7 @@ const PromoBannerTop = () => {
       <span>
         Corra e garanta o seu kit, pois é por tempo limitado!
       </span>
-      <Button onClick={() => window.location.href = '#limited-offer'} className="group px-8 py-6 md:text-1x2  bg-white rounded-full font-medium text-primary hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+      <Button onClick={() => window.location.href = '#limited-offer'} className="group px-8 py-6 md:text-1x2  bg-white rounded-full font-medium text-primary hover:bg-primary hover:text-white transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
           Aproveitar agora
       </Button>
     </div>
