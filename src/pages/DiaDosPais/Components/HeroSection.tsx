@@ -64,7 +64,7 @@ const HeroSection = () => {
               
               <p className="text-lg md:text-xl text-white text-opacity-90">
                 Transforme carinho em presente com os cartões criativos para o dia dos pais.
-                Feito para imprimir, montar com as crianças e emocionar o coraçção do papai.
+                Feito para imprimir, montar com as crianças e emocionar o coração do papai.
               </p>
               <p className="text-lg md:text-xl text-white text-opacity-90">
                 Queremos te ajudar a criar memórias afetivas com seu filho.

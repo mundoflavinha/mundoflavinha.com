@@ -4,17 +4,17 @@ const features = [
   {
     icon: <MailCheck className="h-12 w-12 text-primary mb-4 inline" />, // Ícone de e-mail
     title: "Chega direto no seu e-mail",
-    description: "Assim que concluir sua compra, você recebe o jogo para imprimir e brincar quantas vezes quiser. Prático, rápido e sem frete!"
+    description: "Assim que concluir sua compra será enviado um e-mail com o acesso à plataforma para realizar o download."
   },
   {
     icon: <Printer className="h-12 w-12 text-primary mb-4 inline" />, // Ícone de sorriso
     title: "Você imprime em casa",
-    description: "Simples assim! Você só precisa de uma impressora comum. O jogo foi pensado para ser fácil de montar e brincar."
+    description: "Você recebe os arquivos em PDF, prontos para imprimir. Pode usar papel comum ou papel cartão. O importante é que seja feito pela sua criança."
   },
   {
     icon: <Heart className="h-12 w-12 text-primary mb-4 inline" />, // Ícone de coração
-    title: "Se divirta com seu fihlo",
-    description: "Se divirta em família, crie memórias afetivas e fortaleça o vínculo com seu filho, longe das telas."
+    title: "Se divirta com seu filho",
+    description: "O papai vai receber esse presente surpresa, feito pelas mãozinhas do filho, com a ajuda da mamãe. É uma oportunidade pra se conectar com ele e conversar sobre amor, afeto e gratidão."
   }
 ];
 
