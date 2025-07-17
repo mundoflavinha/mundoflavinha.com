@@ -1,6 +1,6 @@
 const MyProductsGuaranteeSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-quaternary bg-opacity-20">
+    <section className="py-16 md:py-24 bg-quaternary/20">
       <div className="container mx-auto px-4">
         <div className="rounded-2xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto text-center flex flex-col items-center">
           <div className="mb-6">

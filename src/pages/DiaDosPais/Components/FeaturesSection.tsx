@@ -31,7 +31,7 @@ const MyProductsFeaturesSection = () => {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="bg-quaternary bg-opacity-20 p-8 rounded-lg hover:shadow-lg transition-all transform hover:-translate-y-1"
+              className="bg-quaternary/20 p-8 rounded-lg hover:shadow-lg transition-all transform hover:-translate-y-1"
             >
               <div className="text-center">
                 {feature.icon}

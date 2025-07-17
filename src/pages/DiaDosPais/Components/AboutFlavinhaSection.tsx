@@ -2,7 +2,7 @@ import { Button } from "../../../components/ui/button";
 
 const AboutFlavinhaSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-secondary bg-opacity-30">
+    <section className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-12 lg:gap-12 items-center">
           <div className="order-2 md:order-1">

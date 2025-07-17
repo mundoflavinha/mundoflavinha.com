@@ -10,7 +10,7 @@ const pains = [
 
 const OQueVaiReceberSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-tertiary bg-opacity-20">
+    <section className="py-16 md:py-24 bg-primary/20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-32 lg:gap-24 items-center">
           <div className="order-2 md:order-1 text-right">

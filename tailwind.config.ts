@@ -25,28 +25,28 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#e06b75',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--primary))',
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
-					DEFAULT: '#45a29e',
-					foreground: '#000000'
+					DEFAULT: 'hsl(var(--secondary))',
+					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				tertiary: {
-					DEFAULT: '#935f91',
-					foreground: '#000000'
+					DEFAULT: 'hsl(var(--tertiary))',
+					foreground: 'hsl(var(--tertiary-foreground))'
 				},
 				quaternary: {
-					DEFAULT: '#dad4bb',
-					foreground: '#000000'
+					DEFAULT: 'hsl(var(--quaternary))',
+					foreground: 'hsl(var(--quaternary-foreground))'
 				},
 				quinary: {
-					DEFAULT: '#4a5d8a',
-					foreground: '#000000'
+					DEFAULT: 'hsl(var(--quinary))',
+					foreground: 'hsl(var(--quinary-foreground))'
 				},
 				accent: {
-					DEFAULT: '#8AC6D1',
-					foreground: '#ffffff'
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',

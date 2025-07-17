@@ -1,10 +1,17 @@
 import { Button } from "../../../components/ui/button";
+import { useScrollToSection } from "../../../hooks/useSmoothScroll";
 
 const HeroSection = () => {
+  
+  const scrollToSection = useScrollToSection({
+    duration: 700,
+    offset: 80
+  });
+  
   return (
     <section className="md:pt-0 bg-gradient-to-b from-secondary to-white">
       
-      <div className="relative overflow-hidden bg-gradient-to-br from-purple-00 via-cyan-500 to-blue-400">
+      <div className="relative overflow-hidden bg-gradient-to-br from-cyan-500 via-cyan-500 to-blue-400">
         
         <div className="absolute inset-0 bg-black bg-opacity-5">
           <div className="absolute inset-0 bg-funky-pattern"></div>
@@ -50,7 +57,7 @@ const HeroSection = () => {
                 Dia dos pais está chegando!
                 </span>
                 <br />
-                <span className="inline-block bg-clip-text text-primary animate-float">
+                <span className="inline-block bg-clip-text text-tertiary">
                   Que tal fazer algo diferente?
                 </span>
               </h1>
@@ -65,7 +72,7 @@ const HeroSection = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
                 
-              <Button onClick={() => window.location.href = '#limited-offer'} className="group px-8 py-6 md:text-1x2  bg-white rounded-full font-medium text-primary hover:bg-primary hover:text-white transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
+              <Button onClick={() => scrollToSection("#limited-offer")} className="px-8 py-6 md:text-1x2 bg-white rounded-full font-medium text-primary hover:bg-primary hover:text-white hover:scale-105 shadow-lg hover:shadow-xl animate-pulse-glow-white">
                   {/* <a href="#limited-offer"> */}
                     Quero esse kit agora
                   {/* </a> */}

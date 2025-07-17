@@ -2,7 +2,7 @@ import { Button } from "../../../components/ui/button";
 
 const OfferSection = () => {
   return (
-    <section className="pb-16 md:pb-24 py-16 md:py-24 bg-secondary bg-opacity-20" id="limited-offer">
+    <section className="pb-16 md:pb-24 py-16 md:py-24 bg-secondary/20" id="limited-offer">
       <div className="container mx-auto px-4">
         <div className="bg-orange-200 rounded-2xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-40 h-40 bg-primary rounded-full opacity-10 transform translate-x-1/2 -translate-y-1/2"></div>
