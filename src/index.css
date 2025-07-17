@@ -442,3 +442,264 @@ html:not([data-scroll-smooth]) {
   border: 2px solid hsl(var(--accent) / 0.3);
   box-shadow: 0 0 10px hsl(var(--accent) / 0.2);
 }
+
+
+/* Efeito de Borda Gradiente Animada */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(45deg, 
+                hsl(var(--primary)), 
+                hsl(var(--secondary)), 
+                hsl(var(--accent)), 
+                hsl(var(--tertiary)),
+                hsl(var(--primary))
+              ) border-box;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  background-size: 400% 100%;
+  animation: gradientBorderMove 3s ease infinite;
+}
+
+@keyframes gradientBorderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Alternativa mais próxima do Wesley Tome */
+.animated-gradient-border {
+  position: relative;
+  padding: 4px;
+  background: linear-gradient(45deg, 
+    hsl(var(--primary)), 
+    hsl(var(--secondary)), 
+    hsl(var(--accent)), 
+    hsl(var(--tertiary)),
+    hsl(var(--primary))
+  );
+  background-size: 300% 300%;
+  border-radius: 24px;
+  animation: gradientShift 4s ease infinite;
+}
+
+.animated-gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    hsl(var(--primary)), 
+    hsl(var(--secondary)), 
+    hsl(var(--accent)), 
+    hsl(var(--tertiary)),
+    hsl(var(--primary))
+  );
+  background-size: 300% 300%;
+  border-radius: 24px;
+  animation: gradientShift 4s ease infinite reverse;
+  z-index: -1;
+  filter: blur(8px);
+}
+
+.animated-gradient-border .inner-content {
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Efeito mais próximo do site original */
+.wesley-effect {
+  position: relative;
+  display: inline-block;
+}
+
+.wesley-effect::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(45deg, 
+    #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f0932b, #eb4d4b, #6c5ce7, #ff6b6b
+  );
+  background-size: 400% 400%;
+  border-radius: 24px;
+  animation: gradientRotate 3s linear infinite;
+  z-index: -1;
+}
+
+.wesley-effect::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, 
+    #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #f0932b, #eb4d4b, #6c5ce7, #ff6b6b
+  );
+  background-size: 400% 400%;
+  border-radius: 22px;
+  animation: gradientRotate 3s linear infinite reverse;
+  z-index: -1;
+  filter: blur(4px);
+}
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Versão customizada para suas cores */
+.custom-gradient-border {
+  position: relative;
+  padding: 6px;
+  background: linear-gradient(60deg, 
+    hsl(var(--primary)), 
+    hsl(var(--secondary)), 
+    hsl(var(--accent)), 
+    hsl(var(--tertiary)),
+    hsl(var(--quinary)),
+    hsl(var(--primary))
+  );
+  background-size: 300% 300%;
+  border-radius: 24px;
+  animation: smoothGradientFlow 6s ease-in-out infinite;
+}
+
+.custom-gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(60deg, 
+    hsl(var(--primary)), 
+    hsl(var(--secondary)), 
+    hsl(var(--accent)), 
+    hsl(var(--tertiary)),
+    hsl(var(--quinary)),
+    hsl(var(--primary))
+  );
+  background-size: 300% 300%;
+  border-radius: 24px;
+  animation: smoothGradientFlow 6s ease-in-out infinite reverse;
+  z-index: -1;
+  filter: blur(6px);
+  opacity: 0.7;
+}
+
+@keyframes smoothGradientFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+
+/* Efeito Ultimate Mais Orgânico */
+.ultimate-effect {
+  position: relative;
+  /* border: 2px solid hsl(var(--primary) / 0.3); */
+  border-radius: 20px;
+  box-shadow: 
+    0 0 20px hsl(var(--primary) / 0.4),
+    0 0 40px hsl(var(--accent) / 0.3);
+  animation: ultimatePulse 3s ease-in-out infinite;
+}
+
+.ultimate-effect::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: 
+    radial-gradient(ellipse 60% 40% at 20% 30%, hsl(var(--primary) / 0.6), transparent 50%),
+    radial-gradient(ellipse 40% 60% at 80% 20%, hsl(var(--secondary) / 0.5), transparent 45%),
+    radial-gradient(ellipse 50% 50% at 30% 80%, hsl(var(--accent) / 0.4), transparent 40%),
+    radial-gradient(ellipse 70% 30% at 70% 70%, hsl(var(--tertiary) / 0.3), transparent 35%);
+  border-radius: 50%;
+  animation: organicRotate 12s linear infinite, organicMorph 8s ease-in-out infinite;
+  filter: blur(25px);
+  z-index: -1;
+}
+
+.ultimate-effect::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: 
+    radial-gradient(ellipse 50% 70% at 60% 40%, hsl(var(--accent) / 0.4), transparent 60%),
+    radial-gradient(ellipse 40% 50% at 30% 60%, hsl(var(--primary) / 0.3), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, hsl(var(--secondary) / 0.5), transparent 55%);
+  border-radius: 50%;
+  animation: organicRotate 15s linear infinite reverse, organicMorph 10s ease-in-out infinite reverse;
+  filter: blur(20px);
+  z-index: -2;
+}
+
+@keyframes ultimatePulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px hsl(var(--primary) / 0.4),
+      0 0 40px hsl(var(--accent) / 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px hsl(var(--primary) / 0.6),
+      0 0 60px hsl(var(--accent) / 0.5),
+      0 0 80px hsl(var(--secondary) / 0.3);
+    transform: scale(1.01);
+  }
+}
+
+@keyframes organicRotate {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes organicMorph {
+  0%, 100% { 
+    transform: scale(1) translate(0, 0);
+    opacity: 0.8;
+  }
+  25% { 
+    transform: scale(1.02) translate(3px, -2px);
+    opacity: 1;
+  }
+  50% { 
+    transform: scale(0.98) translate(-2px, 4px);
+    opacity: 0.9;
+  }
+  75% { 
+    transform: scale(1.01) translate(4px, 1px);
+    opacity: 0.95;
+  }
+}
