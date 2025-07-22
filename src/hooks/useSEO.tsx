@@ -280,7 +280,17 @@ export function useMundoFlavinhaSEO(pageData: {
 }) {
   const baseUrl = 'https://www.mundoflavinha.com';
   const fullUrl = `${baseUrl}${pageData.path}`;
-  const ogImage = `${baseUrl}/images${pageData.path}-og.jpg`;
+  
+  //Home na raiz, produtos em suas pastas
+  const getOgImage = (path: string) => {
+    if (path === '/') {
+      return `${baseUrl}/images/mundo-flavinha-og.jpg`;
+    }
+
+    return `${baseUrl}/images/products${path}/og.jpg`;
+  };
+
+  const ogImage = getOgImage(pageData.path);
 
   return useSEO({
     title: `${pageData.title} | Mundo Flavinha`,
