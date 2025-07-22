@@ -7,42 +7,26 @@ import OfferSection from "./Components/OfferSection";
 import GuaranteeSection from "./Components/GuaranteeSection";
 import AboutFlavinhaSection from "./Components/AboutFlavinhaSection";
 import PromoBannerTop from "./Components/PromoBannerTop";
-import { Helmet } from 'react-helmet-async';
-import { FacebookPixel } from './Components/FacebookPixel';
+import { useMundoFlavinhaSEO } from "../../hooks/useSEO";
 
 const DiaDosPais = () => {
+  useMundoFlavinhaSEO({
+    title: "Kit Cartões Dia dos Pais - Conecte-se com seu Filho",
+    description: "Kit especial de cartões para o Dia dos Pais. Atividades criativas para pais e filhos criarem memórias afetivas juntos. Imprima em casa!",
+    productName: "Kit Cartões Dia dos Pais",
+    price: "14.99",
+    path: "/dia-dos-pais",
+    keywords: [
+      "cartões dia dos pais", 
+      "atividades pai e filho", 
+      "memórias afetivas", 
+      "mundo flavinha",
+      "kit para imprimir"
+    ]
+  });
+
   return (
     <div className="min-h-screen flex flex-col">
-      <Helmet>
-        <title>Kit Cartões Dia dos Pais | Mundo Flavinha - Conecte-se com seu Filho</title>
-        <meta name="description" content="Kit especial de cartões para o Dia dos Pais. Atividades criativas para pais e filhos criarem memórias afetivas juntos. Imprima em casa!" />
-        
-        {/* Open Graph para redes sociais */}
-        <meta property="og:title" content="Kit Cartões Dia dos Pais | Mundo Flavinha" />
-        <meta property="og:description" content="Transforme o Dia dos Pais em momento especial com cartões criativos. Monte com seu filho e emocione o papai!" />
-        <meta property="og:image" content="https://www.mundoflavinha.com/images/dia-dos-pais-og.jpg" />
-        <meta property="og:url" content="https://www.mundoflavinha.com/dia-dos-pais" />
-        
-        {/* Schema.org para rich snippets */}
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "Product",
-              "name": "Kit Cartões Dia dos Pais",
-              "description": "Kit especial de cartões para o Dia dos Pais",
-              "brand": "Mundo Flavinha",
-              "offers": {
-                "@type": "Offer",
-                "price": "14.99",
-                "priceCurrency": "BRL"
-              }
-            }
-          `}
-        </script>
-      </Helmet>
-
-      <FacebookPixel />
       <PromoBannerTop />
       <Navbar />
       <main>
@@ -58,4 +42,4 @@ const DiaDosPais = () => {
   );
 };
 
-export default DiaDosPais; 
+export default DiaDosPais;

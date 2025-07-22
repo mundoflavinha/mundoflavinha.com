@@ -11,4 +11,16 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  ssr: {
+    noExternal: ['react-helmet-async']
+  },
+  build: {
+    rollupOptions: {
+      external: (id) => {
+        // Não externalize react-helmet-async no build
+        if (id === 'react-helmet-async') return false;
+        return false;
+      }
+    }
+  }
 })

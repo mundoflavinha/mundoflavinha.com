@@ -8,8 +8,17 @@ import ProductsSection from "../components/ProductsSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import CtaSection from "../components/CtaSection";
 import Footer from "../components/Footer";
+import { useMundoFlavinhaSEO } from "../hooks/useSEO";
 
 const Index = () => {
+
+  useMundoFlavinhaSEO({
+    title: "Te ajudo a se conectar com seus filhos!",
+    description: "Atividades lúdicas, jogos educativos e ferramentas práticas...",
+    path: "/",
+    keywords: ["mundo flavinha", "atividades para crianças", "jogos educativos"]
+  });
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />

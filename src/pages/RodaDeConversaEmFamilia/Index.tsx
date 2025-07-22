@@ -9,15 +9,35 @@ import OfferSection from "./Components/MyProductsOfferSection";
 import GuaranteeSection from "./Components/GuaranteeSection";
 import AboutFlavinhaSection from "./Components/AboutFlavinhaSection";
 import PromoBannerTop from "./Components/PromoBannerTop";
-import { Helmet } from 'react-helmet-async';
+import { useMundoFlavinhaSEO } from "../../hooks/useSEO";
 
 const RodaDeConversaEmFamilia = () => {
+
+  useMundoFlavinhaSEO({
+    title: "Roda de Conversa em Família - Conexão e Diálogo",
+    description: "Jogo de perguntas e atividades para criar conversas significativas em família. Fortaleça vínculos, desenvolva comunicação e crie momentos especiais de conexão.",
+    productName: "Roda de Conversa em Família",
+    price: "24.99",
+    path: "/roda-de-conversa-em-familia",
+    keywords: [
+      "roda de conversa",
+      "conversa em família",
+      "diálogo familiar",
+      "comunicação família",
+      "perguntas família",
+      "conexão familiar",
+      "vínculo pais filhos",
+      "mundo flavinha",
+      "comunicação infantil",
+      "desenvolvimento emocional",
+      "tempo em família",
+      "conversas significativas"
+    ]
+  });
+
+
   return (
     <div className="min-h-screen flex flex-col">
-      <Helmet>
-        <title>Mundo Flavinha - Roda de Conversa em Família</title>
-        <meta name="description" content="Roda de Conversa em Família" />
-      </Helmet>
       <PromoBannerTop />
       <Navbar />
       <main>
