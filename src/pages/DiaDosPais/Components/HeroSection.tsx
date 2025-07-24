@@ -81,22 +81,36 @@ const HeroSection = () => {
             </div>
             
         
-            <div className="relative h-64 md:h-full flex items-center justify-center">
-              <img 
+            <div className="relative h-64 md:h-full flex items-center justify-center sm:mt-16 sm:mb-16 mt-5">
+              {/* <img 
                 src="/images/products/dia-dos-pais/dia-dos-pais-filha-dando-cartao.png" 
                 alt="Dia dos pais - Filho dando cartão para o pai" 
                 className="h-60 w-60 object-cover md:h-auto md:w-80 z-10 rounded-full object-cover shadow-[0px_0px_45px_10px_rgba(0,253,255,1)]"
-                />
-              <div className="absolute w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-white-500 to-purple-600 rounded-full animate-pulse-slow"></div>
-              
-        
-              <div className="absolute w-64 h-64 md:w-80 md:h-80 border-4 border-white border-opacity-20 rounded-full transform rotate-45 animate-spin-slow"></div>
-              
-        
-              <div className="absolute w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full animate-float"></div>
-              
-        
-              <div className="absolute w-16 h-16 bg-gradient-to-br from-blue-400 to-teal-300 rounded-full top-1/4 right-1/4 animate-float-delay"></div>
+                /> */}
+
+              <video className="w-full max-w-[320px] h-auto aspect-square object-cover sm:max-w-[384px] md:max-w-[768px] lg:max-w-[1280px] xl:max-w-[1600px] z-10 rounded-full shadow-[0px_0px_45px_10px_rgba(0,253,255,1)]" 
+                controls 
+                autoPlay 
+                muted 
+                loop 
+                poster="/products/dia-dos-pais/videos/2025/capa-cartoes-dia-dos-pais.jpg" 
+                width="640" 
+                height="360">
+                <source src="/products/dia-dos-pais/videos/2025/cartoes-dia-dos-pais.mp4" type="video/mp4" />
+                <source src="/products/dia-dos-pais/videos/2025/cartoes-dia-dos-pais.webm" type="video/webm" />
+                Desculpe, seu navegador não suporta o formato de vídeo.
+              </video>
+              {/* Div decorativa 1: Fundo com gradiente pulsante */}
+              <div className="absolute w-[calc(100%+4rem)] h-[calc(100%+4rem)] md:w-[calc(100%+2rem)] md:h-[calc(80%+1rem)] bg-gradient-to-br from-white/50 to-purple-@00 rounded-full animate-pulse-slow z-1"></div>
+
+              {/* Div decorativa 2: Borda giratória */}
+              <div className="absolute w-[calc(100%+6rem)] h-[calc(100%+6rem)] md:w-[calc(100%+1rem)] md:h-[calc(90%+1rem)] border-4 border-white border-opacity-20 rounded-full transform rotate-45 animate-spin-slow z-1"></div>
+
+              {/* Div decorativa 3: Círculo flutuante amarelo/laranja */}
+              {/* <div className="absolute w-40 h-40 md:w-56 md:h-56 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full top-3/4 left-1/4 animate-float z-1"></div> */}
+
+              {/* Div decorativa 4: Círculo flutuante azul/verde */}
+              {/* <div className="absolute w-20 h-20 md:w-28 md:h-28 bg-gradient-to-br from-blue-400 to-teal-300 rounded-full top-1/4 right-1/4 animate-float-delay z-1"></div> */}
               
             </div>
           </div>
