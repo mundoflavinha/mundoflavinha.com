@@ -79,7 +79,6 @@ const HeroSection = () => {
                 </Button>
               </div>
             </div>
-            
         
             <div className="relative h-64 md:h-full flex items-center justify-center sm:mt-16 sm:mb-16 mt-5">
               {/* <img 
