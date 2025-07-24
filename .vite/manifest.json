@@ -1,6 +1,6 @@
 {
-  "_client-DBHA3Ap6.js": {
-    "file": "assets/client-DBHA3Ap6.js",
+  "_client-IJc-2Tzv.js": {
+    "file": "assets/client-IJc-2Tzv.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-BJRXjD5Y.js",
+    "file": "assets/app-BzhIyXHL.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-DBHA3Ap6.js"
+      "_client-IJc-2Tzv.js"
     ],
     "css": [
       "assets/app-CvfrDwtl.css"
