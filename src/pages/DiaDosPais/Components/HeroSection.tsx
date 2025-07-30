@@ -72,7 +72,7 @@ const HeroSection = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
                 
-              <Button onClick={() => scrollToSection("#limited-offer")} className="px-8 py-6 md:text-1x2 bg-white rounded-full font-medium text-primary hover:bg-primary hover:text-white hover:scale-105 shadow-lg hover:shadow-xl animate-pulse-glow-white">
+              <Button id="btnHeroGoCheckout" data-gtm="go-checkout" onClick={() => scrollToSection("#limited-offer")} className="px-8 py-6 md:text-1x2 bg-white rounded-full font-medium text-primary hover:bg-primary hover:text-white hover:scale-105 shadow-lg hover:shadow-xl animate-pulse-glow-white">
                   {/* <a href="#limited-offer"> */}
                     Quero esse kit agora
                   {/* </a> */}
