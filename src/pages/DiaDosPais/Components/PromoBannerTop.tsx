@@ -14,8 +14,15 @@ const PromoBannerTop = () => {
       <span>
         Corra e garanta o seu kit, pois é por tempo limitado!
       </span>
-      <Button id="btnPromoBannerTopGoCheckout" data-gtm="go-checkout" onClick={() => scrollToSection("#limited-offer")} className="smooth-scrollgroup px-8 py-6 md:text-1x2  bg-white rounded-full font-medium text-primary hover:bg-primary hover:text-white transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-pulse-glow-white">
-          Aproveitar agora
+      <Button 
+        id="btnPromoBannerTopGoCheckout"
+        data-track="checkout-button"
+        data-button-location="promo-banner-top"
+        data-button-text="Aproveitar agora"
+        onClick={() => scrollToSection("#limited-offer")} 
+        className="...suas classes..."
+      >
+        Aproveitar agora
       </Button>
     </div>
   );
