@@ -1,6 +1,6 @@
 {
-  "_client-Didina3Y.js": {
-    "file": "assets/client-Didina3Y.js",
+  "_client-C7qldqni.js": {
+    "file": "assets/client-C7qldqni.js",
     "name": "client",
     "isDynamicEntry": true,
     "imports": [
@@ -8,12 +8,12 @@
     ]
   },
   "index.html": {
-    "file": "assets/app-CnPfrVY4.js",
+    "file": "assets/app-CQ5Y2C2j.js",
     "name": "app",
     "src": "index.html",
     "isEntry": true,
     "dynamicImports": [
-      "_client-Didina3Y.js"
+      "_client-C7qldqni.js"
     ],
     "css": [
       "assets/app--eTYS5eD.css"
