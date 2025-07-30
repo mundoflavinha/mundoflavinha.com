@@ -1,0 +1,22 @@
+{
+  "_client-Didina3Y.js": {
+    "file": "assets/client-Didina3Y.js",
+    "name": "client",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ]
+  },
+  "index.html": {
+    "file": "assets/app-CnPfrVY4.js",
+    "name": "app",
+    "src": "index.html",
+    "isEntry": true,
+    "dynamicImports": [
+      "_client-Didina3Y.js"
+    ],
+    "css": [
+      "assets/app--eTYS5eD.css"
+    ]
+  }
+}
