@@ -20,7 +20,7 @@ const OfferSection = () => {
               <Button
                 id="btnOfferGoCheckout" 
                 data-gtm="go-checkout" 
-                onClick={() => window.open('https://pay.cakto.com.br/zk8k9os_475370', '_blank')}  
+                onClick={() => window.open('https://pay.hotmart.com/V101101441U', '_blank')}  
                 className="group px-8 py-6 bg-primary text-lg hover:bg-opacity-90 text-white rounded-full font-medium hover:bg-secondary transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl animate-pulse-glow"
               >
                 Quero garantir o meu kit agora!
