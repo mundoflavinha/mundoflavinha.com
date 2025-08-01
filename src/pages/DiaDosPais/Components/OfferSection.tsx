@@ -22,7 +22,7 @@ const OfferSection = () => {
                 data-track="checkout-button"
                 data-button-location="offer-section"
                 data-button-text="Quero garantir o meu kit agora!"
-                onClick={() => window.open('https://pay.hotmart.com/V101101441U', '_blank')}
+                onClick={() => window.open('https://pay.hotmart.com/V101101441U?checkoutMode=10', '_blank')}
                 className="...suas classes..."
               >
                 Quero garantir o meu kit agora!
