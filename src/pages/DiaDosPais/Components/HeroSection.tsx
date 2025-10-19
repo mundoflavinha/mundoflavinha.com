@@ -97,11 +97,11 @@ const HeroSection = () => {
                 autoPlay 
                 muted 
                 loop 
-                poster="/products/dia-dos-pais/videos/2025/capa-cartoes-dia-dos-pais.jpg" 
+                poster="/products/dia-dos-pais/videos/2025/criativo_quadrado_cartoes-dia-dos-pais.jpg" 
                 width="640" 
                 height="360">
-                <source src="/products/dia-dos-pais/videos/2025/cartoes-dia-dos-pais.mp4" type="video/mp4" />
-                <source src="/products/dia-dos-pais/videos/2025/cartoes-dia-dos-pais.webm" type="video/webm" />
+                <source src="/products/dia-dos-pais/videos/2025/criativo_quadrado_cartoes-dia-dos-pais.mp4" type="video/mp4" />
+                <source src="/products/dia-dos-pais/videos/2025/criativo_quadrado_cartoes-dia-dos-pais.webm" type="video/webm" />
                 Desculpe, seu navegador não suporta o formato de vídeo.
               </video>
               {/* Div decorativa 1: Fundo com gradiente pulsante */}
