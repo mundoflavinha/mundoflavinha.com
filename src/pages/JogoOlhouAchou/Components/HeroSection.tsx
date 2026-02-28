@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section className="md:pt-0 bg-gradient-to-b from-secondary to-white">
       
-      <div className="relative overflow-hidden bg-gradient-to-br from-purple-00 via-cyan-500 to-blue-400">
+      <div className="relative overflow-hidden bg-gradient-to-br from-primary/80 via-cyan-500 to-blue-400">
         
         <div className="absolute inset-0 bg-black bg-opacity-5">
           <div className="absolute inset-0 bg-funky-pattern"></div>
@@ -62,8 +62,10 @@ const HeroSection = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
                 
-                <Button className="group px-8 py-6 md:text-1x2 bg-white rounded-full font-medium text-primary hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-                  Comprar agora!
+                <Button asChild className="group rounded-full bg-white px-8 py-6 text-lg font-medium text-primary shadow-lg transition-all duration-300 hover:scale-105 hover:bg-primary hover:text-white hover:shadow-xl">
+                  <a href="mailto:contato@mundoflavinha.com?subject=Quero saber mais sobre o Jogo Olhou, Achou!">
+                    Quero saber mais
+                  </a>
                 </Button>
                 
                 {/* <Button className="group px-8 py-6 bg-transparent border-2 border-white border-opacity-50 rounded-full font-medium text-white hover:bg-white hover:bg-opacity-10 transition-all duration-300">
@@ -82,9 +84,9 @@ const HeroSection = () => {
               <img 
                 src="/images/products/filho-celular.png" 
                 alt="Olhou Achou - Jogo Educativo" 
-                className="rounded-lg  w-128 h-128 object-contain mb-4 w-max-lg z-10"
+                className="mb-4 rounded-lg object-contain z-10"
                 />
-              <div className="absolute w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-white-500 to-purple-600 rounded-full animate-pulse-slow"></div>
+              <div className="absolute h-64 w-64 rounded-full bg-gradient-to-br from-white/60 to-primary/30 animate-pulse-slow md:h-80 md:w-80"></div>
               
         
               <div className="absolute w-64 h-64 md:w-80 md:h-80 border-4 border-white border-opacity-20 rounded-full transform rotate-45 animate-spin-slow"></div>

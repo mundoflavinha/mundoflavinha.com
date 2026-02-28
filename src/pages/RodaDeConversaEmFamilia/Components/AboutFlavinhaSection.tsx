@@ -1,5 +1,3 @@
-import { Button } from "../../../components/ui/button";
-
 const MyProductsAboutFlavinhaSection = () => {
   return (
     <section className="py-16 md:py-24 bg-tertiary bg-opacity-20">

@@ -1,15 +1,15 @@
-import React from "react";
 import Home from "./pages/Index";
-import { Navigate } from "react-router-dom";
 import Roda from "./pages/RodaDeConversaEmFamilia/Index";
 import JogoOlhouAchou from "./pages/JogoOlhouAchou/Index";
 import DiaDosPais from "./pages/DiaDosPais/Index";
+import PoliticaDePrivacidade from "./pages/PoliticaDePrivacidade";
+import TermosDeUso from "./pages/TermosDeUso";
+import NotFound from "./pages/NotFound";
 
 export const routes = [
   {
     path: "/",
-    // element: <Home />,
-    element: <Navigate to="/dia-dos-pais" replace />,
+    element: <Home />,
     index: true,
   },
   {
@@ -23,5 +23,17 @@ export const routes = [
   {
     path: "/dia-dos-pais",
     element: <DiaDosPais />,
+  },
+  {
+    path: "/politica-de-privacidade",
+    element: <PoliticaDePrivacidade />,
+  },
+  {
+    path: "/termos-de-uso",
+    element: <TermosDeUso />,
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ];

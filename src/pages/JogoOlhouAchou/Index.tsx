@@ -10,6 +10,7 @@ import OfferSection from "./Components/OfferSection";
 import GuaranteeSection from "./Components/GuaranteeSection";
 import AboutFlavinhaSection from "./Components/AboutFlavinhaSection";
 import PromoBannerTop from "./Components/PromoBannerTop";
+import SkipLink from "../../components/SkipLink";
 import { useMundoFlavinhaSEO } from "../../hooks/useSEO";
 
 const JogoOlhouAchou = () => {
@@ -37,9 +38,10 @@ const JogoOlhouAchou = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SkipLink />
       <PromoBannerTop />
       <Navbar />
-      <main>
+      <main id="main-content">
         <HeroSection />
         <FeaturesSection />
         <MothersPainsSection />

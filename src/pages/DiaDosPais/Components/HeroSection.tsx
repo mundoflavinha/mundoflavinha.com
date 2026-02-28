@@ -78,7 +78,7 @@ const HeroSection = () => {
                 data-button-location="hero-section"
                 data-button-text="Quero esse kit agora"
                 onClick={() => scrollToSection("#limited-offer")} 
-                className="...suas classes..."
+                className="bg-white px-8 py-6 text-lg font-semibold text-primary shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-primary hover:text-white"
               >
                 Quero esse kit agora
               </Button>
@@ -97,15 +97,17 @@ const HeroSection = () => {
                 autoPlay 
                 muted 
                 loop 
-                poster="/products/dia-dos-pais/videos/2025/criativo_quadrado_cartoes-dia-dos-pais.jpg" 
+                playsInline
+                poster="/products/dia-dos-pais/videos/2025/criativo_quadrado_cartoes-dia-dos-pais.png" 
+                preload="metadata"
                 width="640" 
                 height="360">
-                <source src="/products/dia-dos-pais/videos/2025/criativo_quadrado_cartoes-dia-dos-pais.mp4" type="video/mp4" />
-                <source src="/products/dia-dos-pais/videos/2025/criativo_quadrado_cartoes-dia-dos-pais.webm" type="video/webm" />
+                <source src="/products/dia-dos-pais/videos/2025/cartoes-dia-dos-pais.mp4" type="video/mp4" />
+                <source src="/products/dia-dos-pais/videos/2025/cartoes-dia-dos-pais.webm" type="video/webm" />
                 Desculpe, seu navegador não suporta o formato de vídeo.
               </video>
               {/* Div decorativa 1: Fundo com gradiente pulsante */}
-              <div className="absolute w-[calc(100%+4rem)] h-[calc(100%+4rem)] md:w-[calc(100%+2rem)] md:h-[calc(80%+1rem)] bg-gradient-to-br from-white/50 to-purple-@00 rounded-full animate-pulse-slow z-1"></div>
+              <div className="absolute w-[calc(100%+4rem)] h-[calc(100%+4rem)] md:w-[calc(100%+2rem)] md:h-[calc(80%+1rem)] rounded-full bg-gradient-to-br from-white/50 to-primary/10 animate-pulse-slow z-1"></div>
 
               {/* Div decorativa 2: Borda giratória */}
               <div className="absolute w-[calc(100%+6rem)] h-[calc(100%+6rem)] md:w-[calc(100%+1rem)] md:h-[calc(90%+1rem)] border-4 border-white border-opacity-20 rounded-full transform rotate-45 animate-spin-slow z-1"></div>

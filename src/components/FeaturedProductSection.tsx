@@ -1,57 +1,43 @@
-import { Button } from "./ui/button";
-import { CheckCircle } from "lucide-react";
-import { ArrowRight } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+
+const benefits = [
+  "Menos tempo buscando ideias e mais tempo vivendo a experiencia com a crianca.",
+  "Materiais que valorizam afeto, linguagem, curiosidade e participacao da familia.",
+  "Propostas simples de adaptar para casa, escola ou atendimentos.",
+  "Uma comunicacao acolhedora, pratica e centrada na infancia.",
+];
 
 const FeaturedProductSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="order-2 md:order-1">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">Get more out of <br />Prolend Watch</h2>
-            
-            <div className="space-y-6 mb-8">
-              <div className="flex items-start">
-                <CheckCircle className="text-primary mr-3 mt-1 flex-shrink-0" />
-                <p className="text-gray-700">
-                  Fully layered dolor sit amet, consectetur adipisicing elit. Facere, nobis, 
-                  id expedita dolores officiis laboriosam.
-                </p>
+    <section className="bg-white py-16 md:py-24">
+      <div className="container mx-auto grid items-center gap-10 px-4 md:grid-cols-2">
+        <div className="order-2 md:order-1">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            Por que as familias escolhem o projeto
+          </p>
+          <h2 className="mt-4 text-3xl font-bold text-primary md:text-5xl">
+            Conteudo com proposito, sem perder leveza.
+          </h2>
+
+          <div className="mt-8 space-y-5">
+            {benefits.map((benefit) => (
+              <div className="flex items-start gap-3" key={benefit}>
+                <CheckCircle2 aria-hidden="true" className="mt-1 h-5 w-5 text-primary" />
+                <p className="text-gray-700">{benefit}</p>
               </div>
-              <div className="flex items-start">
-                <CheckCircle className="text-primary mr-3 mt-1 flex-shrink-0" />
-                <p className="text-gray-700">
-                  Customizable design dolor sit amet, consectetur adipisicing elit. 
-                  Facere, nobis, id expedita dolores officiis laboriosam.
-                </p>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="text-primary mr-3 mt-1 flex-shrink-0" />
-                <p className="text-gray-700">
-                  Drop ipsum dolor sit amet, consectetur adipisicing elit. Facere, nobis, 
-                  id expedita dolores officiis laboriosam.
-                </p>
-              </div>
-              <div className="flex items-start">
-                <CheckCircle className="text-primary mr-3 mt-1 flex-shrink-0" />
-                <p className="text-gray-700">
-                  Marketing chart dolor sit amet, consectetur adipisicing elit. Facere, 
-                  nobis, id expedita dolores officiis laboriosam.
-                </p>
-              </div>
-            </div>
-            
-            <Button className="text-primary hover:bg-primary hover:text-white border-primary flex items-center gap-2 px-0 border-0">
-              <span>Learn More</span>
-              <ArrowRight className="h-4 w-4" />
-            </Button>
+            ))}
           </div>
-          
-          <div className="order-1 md:order-2 flex justify-center">
-            <img 
-              src="https://images.unsplash.com/photo-1546868871-7041f2a55e12"
-              alt="Premium Smartwatch"
-              className="max-h-96 object-contain"
+        </div>
+
+        <div className="order-1 md:order-2">
+          <div className="overflow-hidden rounded-[2rem] bg-secondary/15 p-4 shadow-sm">
+            <img
+              alt="Flavia Guimaraes em um momento de apresentacao do Mundo Flavinha"
+              className="h-full w-full rounded-[1.5rem] object-cover"
+              height="640"
+              loading="lazy"
+              src="/images/eu-flavinha.jpg"
+              width="640"
             />
           </div>
         </div>

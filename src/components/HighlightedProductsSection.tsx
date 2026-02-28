@@ -1,88 +1,50 @@
+import { HOME_CATALOG } from "../config/site";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
-import { CheckCircle } from "lucide-react";
-
-const highlightedProducts = [
-  {
-    id: 1,
-    name: "Brinquedo Educativo Mesa Play Time",
-    description: "Monitoramento avançado de atividades com alta precisão.",
-    image: "/images/products/cotiplas_brinquedo-educativo_mesa-play-time.jpg",
-    features: [
-      "High-Resolution Audio compatible",
-      "Smart listening experience by Adaptive Sound Control",
-      "Ergonomic, enfolding design earpads"
-    ],
-    price: "R$899,99"
-  },
-  {
-    id: 2,
-    name: "Brinquedo Interativo Musical ",
-    description: "Experiência sonora imersiva com cancelamento de ruído.",
-    image: "/images/products/fisher-price_zebra_blocos-surpresa.jpg",
-    features: [
-      "High-Resolution Audio compatible",
-      "Smart listening experience by Adaptive Sound Control",
-      "Ergonomic, enfolding design earpads"
-    ],
-    price: "R$499,99"
-  },
-  {
-    id: 3,
-    name: "Zebra Blocos Surpresa",
-    description: "Elegância e tecnologia com monitoramento completo de saúde.",
-    image: "/images/products/dm-toys_brinquedo-interativo-musical.jpg",
-    features: [
-      "High-Resolution Audio compatible",
-      "Smart listening experience by Adaptive Sound Control", 
-      "Ergonomic, enfolding design earpads"
-    ],
-    price: "R$1.299,99"
-  }
-];
 
 const HighlightedProductsSection = () => {
   return (
-    <section className="py-16 md:py-24 bg-secondary bg-opacity-30">
+    <section className="bg-primary/10 py-16 md:py-24" id="products">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Produtos em Destaque</h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Conheça nossos produtos mais populares com tecnologia de ponta e design exclusivo.
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold text-primary md:text-4xl">
+            Materiais digitais para comecar hoje
+          </h2>
+          <p className="mt-4 text-lg text-gray-700">
+            Cada proposta foi pensada para ajudar voce a transformar momentos
+            comuns em experiencias mais significativas dentro de casa.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {highlightedProducts.map(product => (
-            <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-shadow rounded-2xl border-none">
-              <div className="bg-white rounded-2xl shadow-md hover:shadow-lg transition-all">
-                <div className="h-64 overflow-hidden flex items-center justify-center p-6">
-                  <img 
-                    src={product.image} 
-                    alt={product.name}
-                    className="w-auto h-full object-contain transition-transform hover:scale-105"
-                  />
-                </div>
-                <div className="p-6 bg-white">
-                  <h3 className="text-xl font-semibold mb-2">{product.name}</h3>
-                  <p className="text-gray-700 mb-4">{product.description}</p>
-                  
-                  <ul className="mb-6 space-y-2">
-                    {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-start">
-                        <span className="text-primary mr-2 mt-0.5">•</span>
-                        <span className="text-gray-600 text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-lg font-bold">{product.price}</span>
-                    <Button className="bg-primary hover:bg-opacity-90">
-                      Comprar agora
-                    </Button>
-                  </div>
-                </div>
+
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
+          {HOME_CATALOG.produtos_destaque.map((product) => (
+            <Card
+              className="overflow-hidden rounded-[2rem] border-none bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+              key={product.href}
+            >
+              <div className="flex h-64 items-center justify-center bg-secondary/10 p-6">
+                <img
+                  alt={product.name}
+                  className="h-full w-full object-contain"
+                  height="320"
+                  loading="lazy"
+                  src={product.image}
+                  width="320"
+                />
+              </div>
+
+              <div className="p-6">
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary/80">
+                  {product.price}
+                </p>
+                <h3 className="mt-3 text-2xl font-semibold text-primary">
+                  {product.name}
+                </h3>
+                <p className="mt-4 min-h-24 text-gray-700">{product.description}</p>
+
+                <Button asChild className="mt-6 w-full bg-primary text-white hover:bg-primary/90">
+                  <a href={product.href}>{product.cta}</a>
+                </Button>
               </div>
             </Card>
           ))}

@@ -1,106 +1,111 @@
+import { HOME_CATALOG } from "../config/site";
 import { Button } from "./ui/button";
-import { Card, CardContent } from "./ui/card";
-import { ShoppingCart } from "lucide-react";
-
-const products = [
-  {
-    id: 1,
-    name: "Premium Product 1",
-    description: "High-quality product with advanced features for everyday use.",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-    price: "$99.99"
-  },
-  {
-    id: 2,
-    name: "Premium Product 2",
-    description: "Elegant design combined with powerful performance.",
-    image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb",
-    price: "$129.99"
-  },
-  {
-    id: 3,
-    name: "Premium Product 3",
-    description: "Innovative technology that simplifies your daily routine.",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22",
-    price: "$79.99"
-  },
-  {
-    id: 4,
-    name: "Premium Product 4",
-    description: "Compact and portable solution for modern lifestyles.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5",
-    price: "$149.99"
-  },
-  {
-    id: 5,
-    name: "Premium Product 5",
-    description: "State-of-the-art technology with intuitive interface.",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-    price: "$199.99"
-  },
-  {
-    id: 6,
-    name: "Premium Product 6",
-    description: "Advanced features packaged in a sleek and modern design.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-    price: "$89.99"
-  },
-  {
-    id: 7,
-    name: "Premium Product 7",
-    description: "Versatile product suitable for professionals and enthusiasts.",
-    image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9",
-    price: "$159.99"
-  },
-  {
-    id: 8,
-    name: "Premium Product 8",
-    description: "Premium quality with a focus on durability and performance.",
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
-    price: "$119.99"
-  },
-];
+import { Card } from "./ui/card";
 
 const ProductsSection = () => {
   return (
-    <section id="products" className="py-16 md:py-24 bg-tertiary bg-opacity-20">
+    <section className="bg-secondary/15 py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Featured Products</h2>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Discover our most popular and highly rated products that customers love.
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold text-primary md:text-4xl">
+            Sugestoes para ampliar o repertorio da brincadeira
+          </h2>
+          <p className="mt-4 text-lg text-gray-700">
+            Alem dos materiais digitais, o Mundo Flavinha tambem compartilha
+            referencias de brinquedos e recursos que podem apoiar a interacao em
+            familia.
           </p>
         </div>
-        
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-          {products.map(product => (
-            <Card key={product.id} className="overflow-hidden hover:shadow-xl transition-shadow h-full">
-              <div className="h-40 md:h-48 overflow-hidden">
-                <img 
-                  src={product.image} 
-                  alt={product.name}
-                  className="w-full h-full object-cover transition-transform hover:scale-105"
-                />
-              </div>
-              <CardContent className="p-4 md:p-6">
-                <h3 className="text-lg md:text-xl font-semibold mb-2">{product.name}</h3>
-                <p className="text-gray-700 mb-4 text-xs md:text-sm">{product.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-base md:text-lg font-bold">{product.price}</span>
-                  <Button size="sm" className="bg-primary hover:bg-opacity-90 flex items-center gap-1">
-                    <ShoppingCart className="h-4 w-4" />
-                    <span className="hidden md:inline">Add to Cart</span>
+
+        <div className="mt-12">
+          <div className="mb-8 flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary/70">
+                Produtos em destaque
+              </p>
+              <h3 className="mt-2 text-2xl font-bold text-primary md:text-3xl">
+                Recomendacoes principais da Flavinha
+              </h3>
+            </div>
+            <div className="hidden h-px flex-1 bg-primary/15 md:block" />
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {HOME_CATALOG.produtos_destaque.map((product) => (
+              <Card
+                className="overflow-hidden rounded-[2rem] border-none bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+                key={product.href}
+              >
+                <div className="flex h-64 items-center justify-center bg-secondary/10 p-6">
+                  <img
+                    alt={product.name}
+                    className="h-full w-full object-contain"
+                    height="320"
+                    loading="lazy"
+                    src={product.image}
+                    width="320"
+                  />
+                </div>
+
+                <div className="flex h-full flex-col p-6">
+                  <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary/80">
+                    {product.price}
+                  </p>
+                  <h3 className="mt-3 text-2xl font-semibold text-primary">
+                    {product.name}
+                  </h3>
+                  <p className="mt-4 flex-1 text-gray-700 md:min-h-24">{product.description}</p>
+
+                  <Button asChild className="mt-6 w-full bg-primary text-white hover:bg-primary/90">
+                    <a href={product.href}>{product.cta}</a>
                   </Button>
                 </div>
-              </CardContent>
-            </Card>
-          ))}
+              </Card>
+            ))}
+          </div>
         </div>
-        
-        <div className="text-center mt-12">
-          <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white px-8">
-            View All Products
-          </Button>
+
+        <div className="mt-16 border-t border-primary/10 pt-12">
+          <div className="mb-8 flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.25em] text-primary/70">
+                Outros produtos
+              </p>
+              <h3 className="mt-2 text-2xl font-bold text-primary md:text-3xl">
+                Mais sugestoes para recomendar aos pais
+              </h3>
+            </div>
+            <div className="hidden h-px flex-1 bg-primary/15 md:block" />
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {HOME_CATALOG.produtos.map((product) => (
+              <Card
+                className="overflow-hidden rounded-[2rem] border-none bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+                key={product.name}
+              >
+                <img
+                  alt={product.name}
+                  className="h-56 w-full object-cover"
+                  height="320"
+                  loading="lazy"
+                  src={product.image}
+                  width="420"
+                />
+                <div className="flex h-full flex-col p-6">
+                  <h3 className="text-xl font-semibold text-primary">
+                    {product.name}
+                  </h3>
+                  <p className="mt-4 flex-1 text-sm leading-6 text-gray-700">
+                    {product.description}
+                  </p>
+                  <Button asChild className="mt-6 w-full bg-primary text-white hover:bg-primary/90">
+                    <a href={product.href}>{product.cta}</a>
+                  </Button>
+                </div>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </section>

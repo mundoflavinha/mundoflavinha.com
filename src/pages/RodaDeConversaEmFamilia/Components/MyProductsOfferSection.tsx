@@ -2,28 +2,31 @@ import { Button } from "../../../components/ui/button";
 
 const MyProductsOfferSection = () => {
   return (
-    <section className="pb-16 md:pb-24 bg-secondary bg-opacity-20" id="limited-offer">
+    <section className="bg-secondary bg-opacity-20 pb-16 md:pb-24" id="limited-offer">
       <div className="container mx-auto px-4">
-        <div className="bg-orange-200 rounded-2xl shadow-xl p-8 md:p-12 max-w-3xl mx-auto text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-40 h-40 bg-primary rounded-full opacity-10 transform translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 left-0 w-40 h-40 bg-tertiary rounded-full opacity-10 transform -translate-x-1/2 translate-y-1/2"></div>
-          <div className="relative z-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Oferta Limitada</h2>
-            <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">Promoção por tempo limitado para as primeiras mães que garantirem.</p>
-            <div className="flex flex-col items-center justify-center mb-8">
-              <span className="text-2xl md:text-4xl font-bold text-primary mb-2 line-through">DE R$ 59,90</span>
-              <span className="text-5xl md:text-6xl font-extrabold text-accent mb-2">POR 39,90</span>
-              <span className="text-base text-gray-500">Oferta de Lançamento</span>
-            </div>
+        <div className="mx-auto max-w-3xl overflow-hidden rounded-2xl bg-orange-200 p-8 text-center shadow-xl md:p-12">
+          <h2 className="text-3xl font-bold md:text-4xl">Quero levar essa roda para casa</h2>
+          <p className="mx-auto mb-8 mt-4 max-w-2xl text-lg text-gray-700">
+            Se voce quer levar esse material para a sua familia, fale comigo e
+            receba os detalhes de acesso e valor atualizado.
+          </p>
 
-            <Button className="group px-8 py-6 bg-primary text-lg hover:bg-opacity-90 text-white rounded-full font-medium text-white hover:bg-opacity-90 transform transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl">
-              Quero garantir o meu jogo agora!
-            </Button>
+          <div className="mb-8 flex flex-col items-center justify-center">
+            <span className="mb-2 text-2xl font-bold text-primary md:text-4xl">
+              Cartoes para dialogos significativos em familia
+            </span>
+            <span className="text-base text-gray-500">Atendimento direto por email</span>
           </div>
+
+          <Button asChild className="group bg-primary px-8 py-6 text-lg text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-primary/90 hover:shadow-xl">
+            <a href="mailto:contato@mundoflavinha.com?subject=Quero saber mais sobre a Roda de Conversa em Familia">
+              Quero saber mais sobre a roda
+            </a>
+          </Button>
         </div>
       </div>
     </section>
   );
 };
 
-export default MyProductsOfferSection; 
+export default MyProductsOfferSection;

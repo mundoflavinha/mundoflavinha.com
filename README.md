@@ -1,57 +1,69 @@
-# mundoflavinha.com
-Landing Page da Flavia
-=======
-# React + TypeScript + Vite
+# Mundo Flavinha
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site institucional e landing pages de produtos digitais do projeto Mundo Flavinha.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18
+- TypeScript
+- Vite
+- `vite-react-ssg`
+- Tailwind CSS
+- Radix UI / shadcn
 
-## Expanding the ESLint configuration
+## Fluxo padrao
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O projeto foi alinhado para usar `pnpm` como gerenciador de pacotes principal.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Instalar dependencias
+
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Desenvolvimento
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+pnpm run dev
+```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+Servidor local padrao: `http://localhost:5175`
 
+### Build estatico
+
+```bash
+pnpm run build
+```
+
+### Preview
+
+```bash
+pnpm run preview
+```
+
+### Qualidade
+
+```bash
+pnpm run lint
+pnpm run typecheck
+```
+
+## Estrutura principal
+
+- `src/pages`: paginas publicas e landings
+- `src/components`: secoes e componentes reutilizaveis
+- `src/config/site.ts`: dados centrais do site, rotas publicas e SEO
+- `public/`: assets publicos
+
+## Publicacao
+
+O deploy em GitHub Pages esta configurado em:
+
+- `.github/workflows/deploy.yml`
+
+O build gera HTML estatico para as rotas publicas e aplica metadados por rota no processo de build.
+
+## Observacoes
+
+- `dist/` nao deve ser tratado como fonte de verdade do projeto.
+- Se houver necessidade de novos produtos, rotas ou metadados, atualize primeiro `src/config/site.ts`.

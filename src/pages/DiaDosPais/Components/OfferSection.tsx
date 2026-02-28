@@ -13,7 +13,7 @@ const OfferSection = () => {
               <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">Promoção para essa data especial.</p>
               <div className="flex flex-col items-center justify-center mb-8">
                 <span className="text-2xl md:text-4xl font-bold text-primary mb-2 line-through">DE R$ 35,99</span>
-                <span className="text-5xl md:text-6xl font-extrabold text-accent mb-2">POR R$ 9,99</span>
+                <span className="text-5xl md:text-6xl font-extrabold text-accent mb-2">POR R$ 14,99</span>
                 <span className="text-base text-gray-500">Oferta de Lançamento</span>
               </div>
 
@@ -23,7 +23,7 @@ const OfferSection = () => {
                 data-button-location="offer-section"
                 data-button-text="Quero garantir o meu kit agora!"
                 onClick={() => window.open('https://pay.hotmart.com/V101101441U?checkoutMode=10', '_blank')}
-                className="...suas classes..."
+                className="bg-primary px-8 py-6 text-lg text-white shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-primary/90"
               >
                 Quero garantir o meu kit agora!
               </Button>

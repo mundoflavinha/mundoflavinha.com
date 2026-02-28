@@ -20,7 +20,7 @@ const PromoBannerTop = () => {
         data-button-location="promo-banner-top"
         data-button-text="Aproveitar agora"
         onClick={() => scrollToSection("#limited-offer")} 
-        className="...suas classes..."
+        className="bg-white px-6 py-3 text-base font-semibold text-primary shadow-lg transition-transform duration-300 hover:scale-105 hover:bg-primary hover:text-white"
       >
         Aproveitar agora
       </Button>

@@ -9,6 +9,7 @@ import OfferSection from "./Components/MyProductsOfferSection";
 import GuaranteeSection from "./Components/GuaranteeSection";
 import AboutFlavinhaSection from "./Components/AboutFlavinhaSection";
 import PromoBannerTop from "./Components/PromoBannerTop";
+import SkipLink from "../../components/SkipLink";
 import { useMundoFlavinhaSEO } from "../../hooks/useSEO";
 
 const RodaDeConversaEmFamilia = () => {
@@ -38,9 +39,10 @@ const RodaDeConversaEmFamilia = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SkipLink />
       <PromoBannerTop />
       <Navbar />
-      <main>
+      <main id="main-content">
         <HeroSection />
         <FeaturesSection />
         <MothersPainsSection />

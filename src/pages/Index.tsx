@@ -2,31 +2,30 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import MothersPainsSection from "../components/MothersPainsSection";
 import FeaturesSection from "../components/FeaturesSection";
-import HighlightedProductsSection from "../components/HighlightedProductsSection";
 import FeaturedProductSection from "../components/FeaturedProductSection";
 import ProductsSection from "../components/ProductsSection";
 import TestimonialsSection from "../components/TestimonialsSection";
 import CtaSection from "../components/CtaSection";
 import Footer from "../components/Footer";
+import SkipLink from "../components/SkipLink";
 import { useMundoFlavinhaSEO } from "../hooks/useSEO";
 
 const Index = () => {
-
   useMundoFlavinhaSEO({
-    title: "Te ajudo a se conectar com seus filhos!",
-    description: "Atividades lúdicas, jogos educativos e ferramentas práticas...",
+    title: "Mundo Flavinha",
+    description: "Atividades ludicas, jogos educativos e materiais praticos para fortalecer o vinculo entre pais e filhos.",
     path: "/",
-    keywords: ["mundo flavinha", "atividades para crianças", "jogos educativos"]
+    keywords: ["mundo flavinha", "atividades para criancas", "jogos educativos"],
   });
 
   return (
     <div className="min-h-screen flex flex-col">
+      <SkipLink />
       <Navbar />
-      <main>
+      <main id="main-content">
         <HeroSection />
         <MothersPainsSection />
         <FeaturesSection />
-        <HighlightedProductsSection />
         <FeaturedProductSection />
         <ProductsSection />
         <TestimonialsSection />
