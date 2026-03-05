@@ -11,6 +11,7 @@ interface SeoProps {
   schema?: Record<string, unknown>;
   author?: string;
   canonical?: string;
+  robots?: string;
 }
 
 function setMetaTag(name: string, content: string, property = false) {
@@ -68,6 +69,7 @@ export function useSEO({
   schema,
   author = "Flavia Guimaraes",
   canonical,
+  robots = "index, follow",
 }: SeoProps) {
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -77,7 +79,7 @@ export function useSEO({
     setMetaTag("description", description);
     setMetaTag("keywords", keywords.join(", "));
     setMetaTag("author", author);
-    setMetaTag("robots", "index, follow");
+    setMetaTag("robots", robots);
     setMetaTag("language", "pt-BR");
 
     setMetaTag("og:title", title, true);
@@ -121,7 +123,7 @@ export function useSEO({
         script.remove();
       }
     };
-  }, [author, canonical, description, image, keywords, schema, title, type, url]);
+  }, [author, canonical, description, image, keywords, robots, schema, title, type, url]);
 }
 
 export function SEOHead(props: SeoProps) {
@@ -149,6 +151,7 @@ export function useMundoFlavinhaSEO(pageData: {
         url: getAbsoluteUrl(path === "/" ? "/" : path),
         canonical: getAbsoluteUrl(path === "/" ? "/" : path),
         schema: configuredPage.schema,
+        robots: configuredPage.robots,
       }
     : {
         title: pageData.title,

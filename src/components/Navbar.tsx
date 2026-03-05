@@ -10,8 +10,15 @@ const navItems = [
   { href: "#contact", label: "Contato" },
 ] as const;
 
-const Navbar = () => {
+interface NavbarProps {
+  homeVersion?: "v1" | "v2";
+}
+
+const Navbar = ({ homeVersion = "v1" }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const alternateHome = homeVersion === "v2"
+    ? { href: "/_old", label: "Ver home _OLD" }
+    : { href: "/", label: "Ver home atual" };
 
   return (
     <nav className="sticky top-0 z-50 bg-white shadow-sm" role="navigation" aria-label="Navegação principal">
@@ -41,9 +48,14 @@ const Navbar = () => {
           </ul>
           
           <div className="hidden md:block">
-            <Button asChild className="bg-primary hover:bg-opacity-90 text-white px-6">
-              <a href="/dia-dos-pais">Ver material em destaque</a>
-            </Button>
+            <div className="flex items-center gap-3">
+              <Button asChild variant="outline" className="border-primary/30 px-5 text-primary hover:bg-primary hover:text-white">
+                <a href={alternateHome.href}>{alternateHome.label}</a>
+              </Button>
+              <Button asChild className="bg-primary hover:bg-opacity-90 text-white px-6">
+                <a href="/dia-dos-pais">Ver material em destaque</a>
+              </Button>
+            </div>
           </div>
           
           {/* Mobile menu button */}
@@ -75,6 +87,13 @@ const Navbar = () => {
                   </a>
                 </li>
               ))}
+              <li>
+                <Button asChild variant="outline" className="w-full border-primary/30 text-primary hover:bg-primary hover:text-white">
+                  <a href={alternateHome.href} onClick={() => setIsMenuOpen(false)}>
+                    {alternateHome.label}
+                  </a>
+                </Button>
+              </li>
               <li>
                 <Button asChild className="bg-primary hover:bg-opacity-90 text-white w-full">
                   <a href="/dia-dos-pais" onClick={() => setIsMenuOpen(false)}>Ver material em destaque</a>

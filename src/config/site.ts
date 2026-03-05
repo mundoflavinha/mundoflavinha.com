@@ -1,5 +1,7 @@
 export type PublicRoute =
   | "/"
+  | "/_old"
+  | "/home-v2"
   | "/jogo-olhou-achou"
   | "/roda-de-conversa-em-familia"
   | "/dia-dos-pais"
@@ -13,6 +15,7 @@ export interface SeoPage {
   imagePath: string;
   type: "website" | "product";
   schema: Record<string, unknown>;
+  robots?: string;
 }
 
 export const SITE_NAME = "Mundo Flavinha";
@@ -147,32 +150,70 @@ export const TESTIMONIALS = [
 
 export const PAGE_SEO: Record<PublicRoute, SeoPage> = {
   "/": {
-    title: "Mundo Flavinha | Brincadeiras, dialogo e conexao em familia",
+    title: "Mundo Flavinha | Brincadeiras com mais presenca e menos tela",
     description:
-      "Atividades ludicas, jogos educativos e materiais praticos para fortalecer o vinculo entre pais e filhos com mais presenca e menos tela.",
+      "Nova home do Mundo Flavinha com narrativa clara, visual elegante e destaque para materiais praticos que fortalecem a conexao em familia.",
     keywords: [
       "mundo flavinha",
-      "atividades para criancas",
-      "jogos educativos",
-      "conexao familiar",
       "brincadeiras em familia",
-      "desenvolvimento infantil",
+      "menos tela",
+      "materiais para pais e filhos",
+      "conexao familiar",
     ],
     imagePath: "/mundo-flavinha-og.jpg",
     type: "website",
     schema: {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: SITE_NAME,
-      url: SITE_URL,
+      "@type": "WebPage",
+      name: "Mundo Flavinha - Home",
+      url: `${SITE_URL}/`,
       description:
-        "Atividades ludicas, jogos educativos e materiais praticos para fortalecer o vinculo entre pais e filhos.",
-      publisher: {
-        "@type": "Organization",
-        name: SITE_NAME,
-        logo: `${SITE_URL}/android-chrome-512x512.png`,
-      },
+        "Nova home do Mundo Flavinha com foco em brincadeiras, conexao familiar e materiais digitais.",
     },
+  },
+  "/_old": {
+    title: "Mundo Flavinha | Home antiga (_OLD)",
+    description:
+      "Versao anterior da home do Mundo Flavinha, mantida para referencia visual e historico de estrutura.",
+    keywords: [
+      "mundo flavinha",
+      "home antiga",
+      "historico",
+      "versao anterior",
+    ],
+    imagePath: "/mundo-flavinha-og.jpg",
+    type: "website",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Mundo Flavinha - Home antiga",
+      url: `${SITE_URL}/_old`,
+      description:
+        "Home anterior do Mundo Flavinha preservada para referencia.",
+    },
+    robots: "noindex, nofollow",
+  },
+  "/home-v2": {
+    title: "Mundo Flavinha | Home principal (alias)",
+    description:
+      "Alias tecnico da home principal do Mundo Flavinha.",
+    keywords: [
+      "mundo flavinha",
+      "home principal",
+      "home v2",
+      "alias",
+    ],
+    imagePath: "/mundo-flavinha-og.jpg",
+    type: "website",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Mundo Flavinha - Home alias",
+      url: `${SITE_URL}/home-v2`,
+      description:
+        "Alias da home principal do Mundo Flavinha.",
+    },
+    robots: "noindex, nofollow",
   },
   "/jogo-olhou-achou": {
     title: "Jogo Olhou, Achou! | Mundo Flavinha",

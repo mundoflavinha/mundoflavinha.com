@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -110,6 +112,20 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Cormorant Garamond", Georgia, serif;
+  }
+
+  .font-brand-sans {
+    font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  }
+}
+
+.home-v2-shell {
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Animações personalizadas */

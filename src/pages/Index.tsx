@@ -12,16 +12,17 @@ import { useMundoFlavinhaSEO } from "../hooks/useSEO";
 
 const Index = () => {
   useMundoFlavinhaSEO({
-    title: "Mundo Flavinha",
-    description: "Atividades ludicas, jogos educativos e materiais praticos para fortalecer o vinculo entre pais e filhos.",
-    path: "/",
+    title: "Mundo Flavinha | Home antiga (_OLD)",
+    description:
+      "Versao anterior da home do Mundo Flavinha, mantida para referencia visual e historico de estrutura.",
+    path: "/_old",
     keywords: ["mundo flavinha", "atividades para criancas", "jogos educativos"],
   });
 
   return (
     <div className="min-h-screen flex flex-col">
       <SkipLink />
-      <Navbar />
+      <Navbar homeVersion="v1" />
       <main id="main-content">
         <HeroSection />
         <MothersPainsSection />

@@ -7,25 +7,57 @@ const distDir = path.resolve("dist");
 const pages = {
   "index.html": {
     route: "/",
-    title: "Mundo Flavinha | Brincadeiras, dialogo e conexao em familia",
+    title: "Mundo Flavinha | Brincadeiras com mais presenca e menos tela",
     description:
-      "Atividades ludicas, jogos educativos e materiais praticos para fortalecer o vinculo entre pais e filhos com mais presenca e menos tela.",
+      "Nova home do Mundo Flavinha com narrativa clara, visual elegante e destaque para materiais praticos que fortalecem a conexao em familia.",
     keywords:
-      "mundo flavinha, atividades para criancas, jogos educativos, conexao familiar, brincadeiras em familia, desenvolvimento infantil",
+      "mundo flavinha, brincadeiras em familia, menos tela, materiais para pais e filhos, conexao familiar",
     image: `${siteUrl}/mundo-flavinha-og.jpg`,
     type: "website",
     schema: {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      name: "Mundo Flavinha",
-      url: siteUrl,
+      "@type": "WebPage",
+      name: "Mundo Flavinha - Home",
+      url: `${siteUrl}/`,
       description:
-        "Atividades ludicas, jogos educativos e materiais praticos para fortalecer o vinculo entre pais e filhos.",
-      publisher: {
-        "@type": "Organization",
-        name: "Mundo Flavinha",
-        logo: `${siteUrl}/android-chrome-512x512.png`,
-      },
+        "Home do Mundo Flavinha com foco em brincadeiras, conexao familiar e materiais digitais.",
+    },
+  },
+  "_old.html": {
+    route: "/_old",
+    title: "Mundo Flavinha | Home antiga (_OLD)",
+    description:
+      "Versao anterior da home do Mundo Flavinha, mantida para referencia visual e historico de estrutura.",
+    keywords: "mundo flavinha, home antiga, historico, versao anterior",
+    image: `${siteUrl}/mundo-flavinha-og.jpg`,
+    type: "website",
+    robots: "noindex, nofollow",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Mundo Flavinha - Home antiga",
+      url: `${siteUrl}/_old`,
+      description:
+        "Home anterior do Mundo Flavinha preservada para referencia.",
+    },
+  },
+  "home-v2.html": {
+    route: "/home-v2",
+    title: "Mundo Flavinha | Home principal",
+    description:
+      "Alias da home principal do Mundo Flavinha.",
+    keywords:
+      "mundo flavinha, home principal, home v2",
+    image: `${siteUrl}/mundo-flavinha-og.jpg`,
+    type: "website",
+    robots: "noindex, nofollow",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Mundo Flavinha - Home alias",
+      url: `${siteUrl}/home-v2`,
+      description:
+        "Alias da home principal do Mundo Flavinha.",
     },
   },
   "jogo-olhou-achou.html": {
@@ -133,6 +165,36 @@ const pages = {
       url: `${siteUrl}/termos-de-uso`,
     },
   },
+  "admin-login.html": {
+    route: "/admin/login",
+    title: "Admin Login | Mundo Flavinha",
+    description: "Area administrativa do Mundo Flavinha.",
+    keywords: "admin, mundo flavinha",
+    image: `${siteUrl}/mundo-flavinha-og.jpg`,
+    type: "website",
+    robots: "noindex, nofollow",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Admin Login",
+      url: `${siteUrl}/admin/login`,
+    },
+  },
+  "admin-home-v2.html": {
+    route: "/admin/home-v2",
+    title: "Admin Home V2 | Mundo Flavinha",
+    description: "Edicao da Home V2 no painel administrativo.",
+    keywords: "admin, home v2, mundo flavinha",
+    image: `${siteUrl}/mundo-flavinha-og.jpg`,
+    type: "website",
+    robots: "noindex, nofollow",
+    schema: {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Admin Home V2",
+      url: `${siteUrl}/admin/home-v2`,
+    },
+  },
 };
 
 function escapeHtml(value) {
@@ -148,6 +210,7 @@ function removeExistingSeo(html) {
     .replace(/<title>[\s\S]*?<\/title>\s*/gi, "")
     .replace(/<meta name="description" content="[^"]*">\s*/gi, "")
     .replace(/<meta name="keywords" content="[^"]*">\s*/gi, "")
+    .replace(/<meta name="robots" content="[^"]*">\s*/gi, "")
     .replace(/<link rel="canonical" href="[^"]*">\s*/gi, "")
     .replace(/<meta property="og:type" content="[^"]*">\s*/gi, "")
     .replace(/<meta property="og:url" content="[^"]*">\s*/gi, "")
@@ -166,11 +229,13 @@ function removeExistingSeo(html) {
 
 function buildSeoBlock(page) {
   const absoluteUrl = `${siteUrl}${page.route === "/" ? "/" : page.route}`;
+  const robots = page.robots ?? "index, follow";
 
   return [
     `    <title>${escapeHtml(page.title)}</title>`,
     `    <meta name="description" content="${escapeHtml(page.description)}">`,
     `    <meta name="keywords" content="${escapeHtml(page.keywords)}">`,
+    `    <meta name="robots" content="${robots}">`,
     `    <link rel="canonical" href="${absoluteUrl}">`,
     `    <meta property="og:type" content="${page.type}">`,
     `    <meta property="og:url" content="${absoluteUrl}">`,
@@ -188,7 +253,28 @@ function buildSeoBlock(page) {
 }
 
 async function processPage(filename, page) {
-  const filepath = path.join(distDir, filename);
+  const candidates = [
+    path.join(distDir, filename),
+    path.join(distDir, `${page.route.slice(1)}.html`),
+    path.join(distDir, page.route.slice(1), "index.html"),
+  ];
+
+  let filepath = "";
+  for (const candidate of candidates) {
+    try {
+      await fs.access(candidate);
+      filepath = candidate;
+      break;
+    } catch {
+      continue;
+    }
+  }
+
+  if (!filepath) {
+    console.warn(`[postbuild-seo] arquivo nao encontrado para rota ${page.route}`);
+    return;
+  }
+
   let html = await fs.readFile(filepath, "utf8");
 
   html = removeExistingSeo(html);

@@ -5,8 +5,8 @@ Allow: /
 # Sitemaps
 Sitemap: https://www.mundoflavinha.com/sitemap.xml
 
-# Disallow admin and private areas (if any in the future)
-# Disallow: /admin/
+# Disallow admin and private areas
+Disallow: /admin/
 # Disallow: /api/
 
 # Crawl-delay (optional, uncomment if needed)
