@@ -343,7 +343,7 @@ const HomeV2Experience = ({ content, disableStickyHeader = false }: HomeV2Experi
 
         <div
           className={`relative lg:hidden transition-[padding] duration-500 ${
-            isHeaderCompact ? "py-3.5" : "py-4"
+            isHeaderCompact ? "pt-3.5 pb-6" : "pt-4 pb-7"
           }`}
         >
           <div className="mx-auto grid max-w-[1120px] grid-cols-[1fr_auto_1fr] items-center px-5 sm:px-6">
